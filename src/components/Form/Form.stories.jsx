@@ -1,0 +1,27 @@
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import Form from './Form';
+import Input from '../Form/Input';
+import { theme } from '../..//styles/theme';
+
+export default {
+  title: 'Components/Form',
+  component: Form,
+};
+
+const Template = (args) => (
+  <ThemeProvider theme={theme}>
+    <Form {...args} />
+  </ThemeProvider>
+);
+
+export const Default = Template.bind({});
+Default.args = {
+  children: (
+    <>
+      <Input label="Nome" />
+      <Input label="Email" type="email" />
+      <button type="submit">Registrar</button>
+    </>
+  ),
+};

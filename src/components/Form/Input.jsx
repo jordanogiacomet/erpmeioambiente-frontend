@@ -9,30 +9,32 @@ const InputWrapper = styled.div`
 const Label = styled.label`
   display: block;
   margin-bottom: 8px;
-  color: ${({ theme }) => theme.colors.textColor};
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const InputField = styled.input`
-  width: 100%;
-  padding: 8px;
-  border: 1px solid ${({ theme }) => theme.colors.mediumGray};
-  border-radius: 4px;
+  padding: 10px 15px;  // Ajuste o padding para um estilo mais confortável
+  border: 2px solid ${({ theme }) => theme.colors.border};
+  border-radius: 25px;  // Arredondamento para os cantos do input
+  background-color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.text};
   outline: none;
+  transition: border-color 0.3s ease;
 
   &:focus {
-    border-color: ${({ theme }) => theme.colors.primaryColor};
+    border-color: ${({ theme }) => theme.colors.focus};
   }
 `;
 
 const Input = ({ label, ...props }) => (
   <InputWrapper>
     <Label>{label}</Label>
-    <InputField {...props}/>
+    <InputField {...props} />
   </InputWrapper>
 );
 
 Input.propTypes = {
-  label: P.string.isRequired,
+  label: P.string
 };
 
 export default Input;
