@@ -1,6 +1,6 @@
 // Input.spec.jsx
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import Input from '../components/Form/Input';
 import renderTheme from '../styles/render-theme';

@@ -1,7 +1,7 @@
 // theme.js
 export const theme = {
   colors: {
-    primary: '#4169E1',    // Manter o azul para destaques e botões
+    primary: '#000000',    // Manter o azul para destaques e botões
     secondary: '#FFFFFF',  // Manter o branco para fundos ou textos claros
     background: '#E0F2F1', // Verde claro para o fundo principal
     text: '#004D40',       // Verde escuro para o texto
@@ -10,14 +10,28 @@ export const theme = {
   },
   font: {
     sizes: {
-      small: '0.875rem',  // 14px - Tamanho de texto pequeno
-      medium: '1rem',     // 16px - Tamanho de texto base
-      large: '1.25rem',   // 20px - Tamanho de texto grande
+      small: '1rem',
+      medium: '1.2rem',
+      large: '1.6rem',
+      xlarge: '2rem',
+      huge: '2.4rem',
+      xhuge: '3rem',
     },
   },
   media: {
-    small: '(max-width: 640px)',  // Para telas pequenas
-    medium: '(max-width: 768px)', // Para tablets
-    large: '(max-width: 1024px)', // Para desktops
+    min: {
+      sm: '(min-width: 640px)',
+      md: '(min-width: 768px)',
+      lg: '(min-width: 1024px)',
+      xl: '(min-width: 1280px)',
+      xxl: '(min-width: 1536px)',
+    },
+    max: {
+      sm: '(max-width: 640px)',
+      md: '(max-width: 768px)',
+      lg: '(max-width: 1024px)',
+      xl: '(max-width: 1280px)',
+      xxl: '(max-width: 1536px)',
+    }
   },
 };

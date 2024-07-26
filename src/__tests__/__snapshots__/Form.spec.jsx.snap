@@ -1,32 +1,128 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Form /> should render correctly with styles 1`] = `
+exports[`<Form /> should render correctly with inputs 1`] = `
 .c0 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 24px;
-  background-color: #FFFFFF;
+  background-color: #000000;
   border-radius: 30px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border: 1px solid #4169E1;
+  border: 1px solid #000000;
 }
 
 .c0>*:not(:last-child) {
   margin-bottom: 16px;
 }
 
+.c1 {
+  margin-bottom: 16px;
+  width: 100%;
+  position: relative;
+}
+
+.c2 {
+  display: block;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.c3 {
+  padding: 15px 0px;
+  width: 100%;
+  border: none;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #FFFFFF;
+  background-color: #000000;
+  color: #FFFFFF;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.c3::placeholder {
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.c4 {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFFFFF;
+  pointer-events: none;
+}
+
 <form
   class="c0"
 >
-  <input
-    placeholder="Test Input"
-    type="text"
-  />
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      Nome
+    </label>
+    <input
+      class="c3"
+    />
+    <svg
+      aria-hidden="true"
+      class="svg-inline--fa fa-envelope c4"
+      data-icon="envelope"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 512 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
+  <div
+    class="c1"
+  >
+    <label
+      class="c2"
+    >
+      Email
+    </label>
+    <input
+      class="c3"
+      type="email"
+    />
+    <svg
+      aria-hidden="true"
+      class="svg-inline--fa fa-lock c4"
+      data-icon="lock"
+      data-prefix="fas"
+      focusable="false"
+      role="img"
+      viewBox="0 0 448 512"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z"
+        fill="currentColor"
+      />
+    </svg>
+  </div>
   <button
     type="submit"
   >
-    Submit
+    Registrar
   </button>
 </form>
 `;
