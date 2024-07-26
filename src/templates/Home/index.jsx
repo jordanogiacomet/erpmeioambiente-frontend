@@ -2,7 +2,7 @@ import Form from '../../components/Form/Form';
 import * as Styled from './styles';
 import Input from '../../components/Form/Input';
 import Heading from '../../components/Heading/Heading';
-import Button from '../../components/Form/Button';
+import Button from '../../components/Button/Button';
 
 function Home() {
   return (

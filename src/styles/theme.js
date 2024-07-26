@@ -7,6 +7,7 @@ export const theme = {
     text: '#004D40',       // Verde escuro para o texto
     border: '#80CBC4',     // Verde para bordas sutis
     focus: '#004D40',      // Cor de foco, pode ser usada para bordas ao focar no input
+    hoverFormButton: '#d0d0d0',
   },
   font: {
     sizes: {
