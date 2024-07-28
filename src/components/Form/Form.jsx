@@ -13,7 +13,7 @@ const FormWrapper = styled.form`
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border: 1px solid ${({ theme }) => theme.colors.primary};
   & > *:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   };
 `;
 

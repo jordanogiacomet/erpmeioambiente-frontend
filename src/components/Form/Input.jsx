@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 
 const InputWrapper = styled.div`
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   width: 100%;
   position: relative;
 `;

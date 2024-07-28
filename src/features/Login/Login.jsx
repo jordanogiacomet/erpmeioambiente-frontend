@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   @media ${({ theme }) => theme.media.max.lg} {
     flex-direction: column;
     gap: 20px;
@@ -39,6 +39,7 @@ const Login = () => {
       </Wrapper>
       <Button text={loading ? "Loading..." : "Login In"} type="submit" disabled={loading} />
       {error && <Paragraph>{error}</Paragraph>}
+      <Paragraph>Não possui uma conta? <Button color="#FFFFFF" variant="forgot-password" text="Registre-se"/></Paragraph>
     </Form>
   );
 };
