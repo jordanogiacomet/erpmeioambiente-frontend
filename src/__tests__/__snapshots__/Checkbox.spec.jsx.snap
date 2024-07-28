@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckboxInput /> should match snapshot 1`] = `
+.c0 {
+  display: flex;
+  align-items: center;
+}
+
+.c2 {
+  margin-left: 8px;
+  color: #FFFFFF;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.c1 {
+  width: auto;
+  cursor: pointer;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <input
+      class="c1"
+      id="remember me"
+      type="checkbox"
+    />
+    <label
+      class="c2"
+      for="remember me"
+    >
+      remember me
+    </label>
+  </div>
+</div>
+`;

@@ -7,12 +7,12 @@ import renderTheme from '../styles/render-theme';
 
 
 describe('<Input />', () => {
-  it('renders correctly with a label', () => {
+  it('should renders correctly with a label', () => {
     renderTheme(<Input label="Test Label" />);
     expect(screen.getByText('Test Label')).toBeInTheDocument();
   });
 
-  it('passes other props to the input element', () => {
+  it('should passes other props to the input element', () => {
     renderTheme(<Input label="Email" type="email" placeholder="Enter your email" />);
     const inputElement = screen.getByPlaceholderText('Enter your email');
     expect(inputElement).toHaveAttribute('type', 'email');

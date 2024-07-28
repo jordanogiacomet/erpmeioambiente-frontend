@@ -1,10 +1,9 @@
 import React from 'react';
 import renderTheme from '../styles/render-theme';
 import 'jest-styled-components';
-import { theme } from '../styles/theme';
 import { screen } from '@testing-library/react';
 import Button from '../components/Button/Button';
-import userEvent from '@testing-library/user-event';
+
 
 describe('<Button />', () => {
   it('should render with default props', () => {
@@ -14,6 +13,10 @@ describe('<Button />', () => {
   it('should render as disabled when the disabled prop is passed', () => {
     renderTheme(<Button text="Login In" disabled />);
     expect(screen.getByText('Login In')).toBeDisabled();
+  });
+  it('should render with variant styles', () => {
+    renderTheme(<Button text="forgot password" variant="forgot-password"/>);
+    expect(screen.getByText('forgot password')).toHaveStyleRule('width', 'fit-content')
   });
   /*
   it('should apply custom background color', () => {
