@@ -2,7 +2,7 @@ import React from 'react';
 import { screen } from '@testing-library/react';
 import renderTheme from '../styles/render-theme';
 import { TextBlock } from '../components/TextBlock';
-import theme from '../styles/theme';
+
 
 describe('<TextBlock />', () => {
   it('should render all elements', () => {
