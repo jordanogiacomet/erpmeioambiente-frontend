@@ -7,11 +7,11 @@ import renderTheme from '../styles/render-theme';
 import Login from '../features/Login/login';
 import '@testing-library/jest-dom/extend-expect';
 
-jest.mock('../services/api'); 
+jest.mock('../services/api');
 
 describe('<Login />', () => {
   beforeEach(() => {
-    jest.spyOn(Storage.prototype, 'setItem'); 
+    jest.spyOn(Storage.prototype, 'setItem');
   });
 
   afterEach(() => {
@@ -45,6 +45,10 @@ describe('<Login />', () => {
       });
       expect(localStorage.setItem).toHaveBeenCalledWith('token', 'fake-token');
     });
+  });
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<MemoryRouter><Login /></MemoryRouter>);
+    expect(container).toMatchSnapshot();
   });
 });
 
