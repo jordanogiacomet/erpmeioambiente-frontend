@@ -16,6 +16,12 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  align-items: center;
+  margin-bottom: 16px;
+  @media ${({ theme }) => theme.media.max.lg} {
+    flex-direction: column;
+    gap: 20px;
+  }
 `;
 
 const Login = () => {

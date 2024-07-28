@@ -5,8 +5,6 @@ import P from 'prop-types';
 const CheckboxWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
-  width: 100%;
 `;
 
 const CheckboxLabel = styled.label`
