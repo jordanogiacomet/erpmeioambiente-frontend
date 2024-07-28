@@ -21,6 +21,7 @@ const Wrapper = styled.div`
   @media ${({ theme }) => theme.media.max.lg} {
     flex-direction: column;
     gap: 20px;
+    align-items: start;
   }
 `;
 
