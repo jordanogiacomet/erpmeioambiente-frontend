@@ -5,7 +5,7 @@ import Input from '../Form/Input';
 import { theme } from '../..//styles/theme';
 
 export default {
-  title: 'Components/Form',
+  title: 'Login/Form',
   component: Form,
 };
 

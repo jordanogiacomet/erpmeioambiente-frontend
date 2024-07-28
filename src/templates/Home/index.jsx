@@ -1,6 +1,6 @@
 import * as Styled from './styles';
 import Login from '../../features/Login/Login';
-import { TextBlock } from '../../components/TextBlock';
+import TextBlock from '../../components/TextBlock/TextBlock';
 
 function Home() {
   return (

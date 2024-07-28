@@ -6,6 +6,7 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: clamp(300px, 50%, 600px);
+  background-color: ${({ backgroundColor, theme }) => backgroundColor || theme.colors.primary};
   color: ${({ theme }) => theme.colors.secondary}
 `;
 
@@ -20,7 +21,7 @@ const Subtitle = styled(Heading)`
 `;
 
 
-export const TextBlock = ({ children, title, subtitle }) => {
+const TextBlock = ({ children, title, subtitle, backgroundColor }) => {
   return (
     <TextContainer>
       <Heading>{title}</Heading>
@@ -34,4 +35,7 @@ TextBlock.propTypes = {
   children: P.node.isRequired,
   title: P.string.isRequired,
   subtitle: P.string.isRequired,
+  backgroundColor: P.string,
 };
+
+export default TextBlock;
