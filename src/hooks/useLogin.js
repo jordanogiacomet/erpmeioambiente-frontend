@@ -8,8 +8,10 @@ const useLogin = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
 
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -27,7 +29,7 @@ const useLogin = () => {
   };
 
   return {
-    email, setEmail, password, setPassword, error, loading, handleSubmit,
+    email, setEmail, password, setPassword, rememberMe, setRememberMe, error, loading, handleSubmit
   };
 };
 

@@ -1,5 +1,5 @@
 import P from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const ButtonWrapper = styled.button`
   width: 100%;
@@ -21,9 +21,22 @@ const ButtonWrapper = styled.button`
     background-color: ${({ theme }) => theme.colors.disabled};
     cursor: not-allowed;
   }
+
+  ${({ variant }) =>
+    variant === 'forgot-password' &&
+    css`
+      width: fit-content;
+      padding: 0;
+      background-color: transparent;
+      text-decoration: underline;
+      white-space: nowrap;
+      &:hover {
+        background-color: transparent;
+      }
+    `}
 `;
 
-const Button = ({ text, backgroundColor, color, fontSize, hoverBackgroundColor, disabled, ...props }) => {
+const Button = ({ text, backgroundColor, color, fontSize, hoverBackgroundColor, disabled, type, variant, ...props }) => {
   return (
     <ButtonWrapper
       backgroundColor={backgroundColor}
@@ -32,6 +45,8 @@ const Button = ({ text, backgroundColor, color, fontSize, hoverBackgroundColor, 
       hoverBackgroundColor={hoverBackgroundColor}
       disabled={disabled}
       aria-label={text}
+      type={type}
+      variant={variant}
       {...props}
     >
       {text}
@@ -46,6 +61,8 @@ Button.propTypes = {
   fontSize: P.string,
   hoverBackgroundColor: P.string,
   disabled: P.bool,
+  type: P.string,
+  variant: P.string,
 };
 
 

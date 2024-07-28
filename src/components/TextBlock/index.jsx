@@ -5,7 +5,7 @@ import Heading from '../Heading/Heading';
 const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: clamp(320px, 50%, 600px);
+  width: clamp(300px, 50%, 600px);
   color: ${({ theme }) => theme.colors.secondary}
 `;
 
