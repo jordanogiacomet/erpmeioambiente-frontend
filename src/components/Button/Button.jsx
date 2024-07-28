@@ -22,8 +22,8 @@ const ButtonWrapper = styled.button`
     cursor: not-allowed;
   }
 
-  ${({ variant }) =>
-    variant === 'forgot-password' &&
+  ${({ $variant }) =>
+    $variant === 'forgot-password' &&
     css`
       width: fit-content;
       padding: 0;
@@ -46,7 +46,7 @@ const Button = ({ text, backgroundColor, color, fontSize, hoverBackgroundColor, 
       disabled={disabled}
       aria-label={text}
       type={type}
-      variant={variant}
+      $variant={variant}
       {...props}
     >
       {text}

@@ -13,18 +13,19 @@ const TextContainer = styled.div`
 const Paragraph = styled.p`
   margin-top: 16px;
   line-height: 2rem;
-  font-size: ${({ theme }) => theme.font.sizes.large};
+  font-size: ${({ theme }) => theme.font.sizes.xlarge};
 `;
 
 const Subtitle = styled(Heading)`
   margin-top: 8px;
+  font-size: ${({ theme }) => theme.font.sizes.huge} !important;
 `;
 
 
 const TextBlock = ({ children, title, subtitle, backgroundColor }) => {
   return (
     <TextContainer>
-      <Heading>{title}</Heading>
+      <Heading size='big'>{title}</Heading>
       <Subtitle as="h3">{subtitle}</Subtitle>
       <Paragraph>{children}</Paragraph>
     </TextContainer>
