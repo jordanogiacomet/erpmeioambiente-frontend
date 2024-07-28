@@ -11,13 +11,13 @@ const Paragraph = styled.p`
 `;
 
 const Login = () => {
- const { email, setEmail, password, setPassword, error, loading, handleSubmit } = useLogin();
+  const { email, setEmail, password, setPassword, error, loading, handleSubmit } = useLogin();
 
   return (
     <Form onSubmit={handleSubmit}>
       <Heading as="h2" size="big" colorDark={false}>Login In</Heading>
-      <Input type="email" placeholder="Digite seu email" label="Email" icon="email" required value={email} onChange={(e) => setEmail(e.target.value)} />
-      <Input type="password" placeholder="Digite sua senha" label="Senha" icon="password" required minLength={5} maxLength={20} value={password} onChange={(e) => setPassword(e.target.value)} />
+      <Input type="email" placeholder="Digite seu email" label="Email" icon="email" required value={email} onChange={(e) => setEmail(e.target.value)} id="email" />
+      <Input type="password" placeholder="Digite sua senha" label="Senha" icon="password" required minLength={5} maxLength={20} value={password} onChange={(e) => setPassword(e.target.value)} id="password" />
       {error && <Paragraph>{error}</Paragraph>}
       <Button text={loading ? "Loading..." : "Login In"} type="submit" disabled={loading} />
     </Form>

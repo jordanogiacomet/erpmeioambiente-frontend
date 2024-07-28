@@ -44,7 +44,7 @@ const Icon = styled(FontAwesomeIcon)`
   pointer-events: none;  /* Prevent icon from capturing pointer events */
 `;
 
-const Input = ({ label, icon, ...props }) => {
+const Input = ({ label, icon, id, ...props}) => {
   let selectedIcon;
 
   switch (icon) {
@@ -60,8 +60,8 @@ const Input = ({ label, icon, ...props }) => {
 
   return (
     <InputWrapper>
-      <Label>{label}</Label>
-      <InputField {...props} />
+      <Label htmlFor={id}>{label}</Label>
+      <InputField {...props} id={id} />
       {selectedIcon && <Icon icon={selectedIcon} />}
     </InputWrapper>
   );
@@ -70,6 +70,7 @@ const Input = ({ label, icon, ...props }) => {
 Input.propTypes = {
   label: P.string.isRequired,
   icon: P.string.isRequired,
+  id: P.string.isRequired,
 };
 
 export default Input;
