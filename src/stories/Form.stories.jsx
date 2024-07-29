@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import Form from './Form';
-import Input from '../Form/Input';
-import { theme } from '../..//styles/theme';
+import Form from '../components/Form/Form';
+import Input from '../components/Form/Input';
+import { theme } from '../styles/theme';
 
 export default {
   title: 'Login/Form',

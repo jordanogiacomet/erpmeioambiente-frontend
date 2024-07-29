@@ -1,7 +1,7 @@
 import React from 'react';
-import Heading from './Heading';
+import Heading from '../components/Heading/Heading';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../../styles/theme';
+import { theme } from '../styles/theme';
 
 export default {
   title: 'Components/Heading',

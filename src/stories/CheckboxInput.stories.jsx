@@ -2,8 +2,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import CheckboxInput from './CheckboxInput';
-import { theme } from '../../styles/theme';
+import CheckboxInput from '../components/Form/CheckboxInput';
+import { theme } from '../styles/theme';
 
 const Template = (args) => (
   <ThemeProvider theme={theme}>

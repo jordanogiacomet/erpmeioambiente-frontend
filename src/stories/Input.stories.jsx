@@ -1,7 +1,7 @@
 import React from 'react';
-import Input from '../Form/Input';
+import Input from '../components/Form/Input';
 import { ThemeProvider } from 'styled-components';
-import { theme } from '../../styles/theme';
+import { theme } from '../styles/theme';
 
 const withThemeProvider = (Story, context) => (
   <ThemeProvider theme={theme}>

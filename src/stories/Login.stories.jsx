@@ -2,8 +2,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import Login from './Login';
-import { theme } from '../../styles/theme';
+import Login from '../features/Login/Login';
+import { theme } from '../styles/theme';
 import { MemoryRouter } from 'react-router-dom';
 
 const Template = (args) => (

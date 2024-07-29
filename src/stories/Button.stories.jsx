@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import Button from './Button';
-import { theme } from '../../styles/theme';
+import Button from '../components/Button/Button';
+import { theme } from '../styles/theme';
 
 
 export default {

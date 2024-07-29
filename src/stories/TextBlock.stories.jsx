@@ -2,8 +2,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { withKnobs, text, color } from '@storybook/addon-knobs';
-import TextBlock from './TextBlock';
-import { theme } from '../../styles/theme';
+import TextBlock from '../components/TextBlock/TextBlock';
+import { theme } from '../styles/theme';
 
 const Template = (args) => (
   <ThemeProvider theme={theme}>
