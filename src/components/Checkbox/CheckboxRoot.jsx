@@ -1,9 +1,9 @@
 import P from 'prop-types';
 import { CheckboxWrapper } from './styles/CheckboxWrapper';
 
-export const CheckboxRoot = ({ children }) => {
+export const CheckboxRoot = ({ children, ...props }) => {
   return (
-    <CheckboxWrapper>
+    <CheckboxWrapper {...props}>
       {children}
     </CheckboxWrapper>
   );

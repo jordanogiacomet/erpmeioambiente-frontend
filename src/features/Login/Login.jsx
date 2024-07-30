@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Form from '../../components/Form/Form';
 import { Input } from '../../components/Input';
-import Heading from '../../components/Heading/Heading';
-import Button from '../../components/Button/Button';
+import { Heading } from '../../components/Heading/Heading';
+import { Button } from '../../components/Button';
 import useLogin from '../../hooks/useLogin';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { Checkbox } from '../../components/Checkbox';
@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const Login = () => {
+export const Login = () => {
   const { email, setEmail, password, setPassword, rememberMe, setRememberMe, error, loading, handleSubmit } = useLogin();
 
   return (
@@ -47,13 +47,12 @@ const Login = () => {
           <Checkbox.Field id="remember-me" checked={rememberMe} onChange={() => setRememberMe(!rememberMe)}/>
           <Checkbox.Label htmlFor="remember-me" text="Remember me"/>
         </Checkbox.Root>
-        <Button text="Esqueci minha senha" color="#FFFFFF" variant="forgot-password" />
+        <Button.Main text="Esqueci minha senha" color="#FFFFFF" variant="forgot-password" />
       </Wrapper>
-      <Button text={loading ? "Loading..." : "Login In"} type="submit" disabled={loading} />
+      <Button.Main text={loading ? "Loading..." : "Login In"} type="submit" disabled={loading} />
       {error && <Paragraph>{error}</Paragraph>}
-      <Paragraph>Não possui uma conta? <Button color="#FFFFFF" variant="forgot-password" text="Registre-se"/></Paragraph>
+      <Paragraph>Não possui uma conta? <Button.Main color="#FFFFFF" variant="forgot-password" text="Registre-se"/></Paragraph>
     </Form>
   );
 };
 
-export default Login;

@@ -26,7 +26,7 @@ const Title = styled.h1`
   `};
 `;
 
-const Heading = ({ children, as = 'h1', size = 'big', uppercase = false, colorDark = false }) => {
+export const Heading = ({ children, as = 'h1', size = 'big', uppercase = false, colorDark = false }) => {
   return (
     <Title as={as} $colorDark={colorDark} size={size} $uppercase={uppercase}>
       {children}
@@ -42,4 +42,4 @@ Heading.propTypes = {
   colorDark: P.bool,
 };
 
-export default Heading;
+

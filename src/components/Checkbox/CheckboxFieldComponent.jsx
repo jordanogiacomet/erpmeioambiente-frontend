@@ -4,7 +4,7 @@ import { CheckboxField } from './styles/CheckboxField';
 
 export const CheckboxFieldComponent = ({ id, checked, onChange, ...props  }) => {
   return (
-    <CheckboxField id={id} checked={checked} onChange={onChange} type="checkbox" />
+    <CheckboxField id={id} checked={checked} onChange={onChange} type="checkbox" {...props}/>
   );
 };
 
