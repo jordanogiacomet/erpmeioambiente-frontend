@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Container = styled.section`
    background-color: black;
@@ -15,3 +16,7 @@ export const Container = styled.section`
       flex-direction: column;
    };
 `;
+
+export const MotionDiv = styled(motion.div)`
+   width: clamp(300px, 50%, 600px);
+`
