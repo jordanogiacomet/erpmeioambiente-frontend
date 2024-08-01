@@ -1,52 +1,47 @@
-import React, { useState } from 'react';
+// components/RegisterEndForm.js
+import React from 'react';
 import styled from 'styled-components';
-import { useRegistration } from '../../contexts/RegistrationContext';
-import { Input } from '../../components/Input'
+import { Input } from '../../components/Input';
 import { Button } from '../../components/Button';
 import { Heading } from '../../components/Heading/Heading';
 import P from 'prop-types';
 import Form from '../../components/Form/Form';
+import { useRegistration } from '../../contexts/RegistrationContext';
 
 const Paragraph = styled.p`
   color: ${({ theme }) => theme.colors.secondary};
 `;
 
-export const RegisterEndForm = ({ onSubmit, onBackToLoginClick }) => {
-  const { formData, updateFormData } = useRegistration();
-  const [name, setName] = useState(formData.name || '');
-  const [contact, setContact] = useState(formData.contact || '');
-  const [cnpj, setCnpj] = useState(formData.cnpj || '');
-  const [address, setAddress] = useState(formData.address || '');
-  const [cep, setCep] = useState(formData.cep || '');
+export const RegisterEndForm = ({ onSubmit, onBackToLoginClick, loading, error }) => {
+  const { name, setName, contact, setContact, cnpj, setCnpj, address, setAddress, cep, setCep } = useRegistration();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    updateFormData({ name, contact, cnpj, address, cep });
-    onSubmit(); 
+    onSubmit();
   };
 
   return (
     <Form onSubmit={handleSubmit}>
       <Heading as="h2" size="big" colorDark={false}>
-        Complete your infos
+        Complete seus dados
       </Heading>
       <Input.Root>
-        <Input.Label htmlFor="name" text="Name" />
+        <Input.Label htmlFor="name" text="Nome" />
         <Input.Field
           type="text"
           id="name"
-          placeholder="Enter your name"
+          placeholder="Digite seu nome"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
       </Input.Root>
       <Input.Root>
-        <Input.Label htmlFor="contact" text="Contact" />
+        <Input.Label htmlFor="contact" text="Contato" />
         <Input.Field
           type="text"
           id="contact"
-          placeholder="Enter your contact number"
+          placeholder="Digite seu número de contato"
           value={contact}
           onChange={(e) => setContact(e.target.value)}
           required
@@ -57,18 +52,18 @@ export const RegisterEndForm = ({ onSubmit, onBackToLoginClick }) => {
         <Input.Field
           type="text"
           id="cnpj"
-          placeholder="Enter your CNPJ"
+          placeholder="Digite seu CNPJ"
           value={cnpj}
           onChange={(e) => setCnpj(e.target.value)}
           required
         />
       </Input.Root>
       <Input.Root>
-        <Input.Label htmlFor="address" text="Address" />
+        <Input.Label htmlFor="address" text="Endereço" />
         <Input.Field
           type="text"
           id="address"
-          placeholder="Enter your address"
+          placeholder="Digite seu endereço"
           value={address}
           onChange={(e) => setAddress(e.target.value)}
           required
@@ -79,14 +74,17 @@ export const RegisterEndForm = ({ onSubmit, onBackToLoginClick }) => {
         <Input.Field
           type="text"
           id="cep"
-          placeholder="Enter your CEP"
+          placeholder="Digite seu CEP"
           value={cep}
           onChange={(e) => setCep(e.target.value)}
           required
         />
       </Input.Root>
-      <Button.Main text="Registrar-se" type="submit" />
-      <Paragraph>Já possui uma conta? <Button.Main text="Volte para o Login" color="#FFFFFF" variant="forgot-password" onClick={onBackToLoginClick} type="button"/></Paragraph>
+      <Button.Main text={loading ? "Carregando..." : "Registrar-se"} type="submit" />
+      {error && <Paragraph>{error}</Paragraph>}
+      <Paragraph>
+        Já possui uma conta? <Button.Main text="Volte para o Login" color="#FFFFFF" variant="forgot-password" onClick={onBackToLoginClick} type="button" />
+      </Paragraph>
     </Form>
   );
 };
@@ -94,6 +92,6 @@ export const RegisterEndForm = ({ onSubmit, onBackToLoginClick }) => {
 RegisterEndForm.propTypes = {
   onSubmit: P.func.isRequired,
   onBackToLoginClick: P.func.isRequired,
+  loading: P.bool.isRequired,
+  error: P.string,
 };
-
-
